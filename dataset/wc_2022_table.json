@@ -1,0 +1,26 @@
+{
+    "stage":{
+        "groups":
+        {
+            "group-a": ["Qatar","Ecuador","Senegal","Netherlands"],
+            "group-b": ["England","Iran","USA","Wales"],
+            "group-c": ["Argentina","Saudi Arabia","Mexico","Poland"],
+            "group-d": ["France","Australia","Denmark","Tunisia"],
+            "group-e": ["Spain","Costa Rica","Germany","Japan"],
+            "group-f": ["Belgium","Canada","Morocco","Croatia"],
+            "group-g": ["Brazil","Serbia","Switzerland","Cameroon"],
+            "group-h": ["Portugal","Ghana","Uruguay","South Korea"]
+        }
+    },
+    "knockouts":
+    {
+        "knockout-16":
+        {
+            "kn16-01": [["1A","2B"],["1C","2D"]],
+            "kn16-02": [["1E","2F"],["1G","2H"]],
+            "kn16-03": [["1B","2A"],["1D","2C"]],
+            "kn16-04": [["1F","2E"],["1H","2G"]]
+        }
+    }
+    
+}
