@@ -37,7 +37,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
                 
             except:
                 X_.loc[idx,'total_points']=0
-                X_.loc[idx,'rank_change']=0
+                X_.loc[idx,'rank_change']=-1
                 
                 #print('error ranking...')
             #print(f'Game {ht} Vs. {wt}')

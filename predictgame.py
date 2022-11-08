@@ -21,7 +21,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import ExtraTreeClassifier
 from sklearn.pipeline import Pipeline
 import random
-from xgboost import XGBRegressor
+#from xgboost import XGBRegressor
 from sklearn.multioutput import MultiOutputRegressor
 import joblib
 
@@ -44,11 +44,14 @@ class PredictGame:
         # define features
 
     def predict(self):
-        
+
+
+        dateTimeObj = datetime.now()
+        timestampStr = dateTimeObj.strftime("%Y%m%d%H%M%S")        
         #load your model for further usage
         feat = ['1N2_1','1N2_N','1N2_2','home_team_rank_FIFA','away_team_rank_FIFA','season','home_team','away_team']
         #feat = ['1N2_1','1N2_N','1N2_2','home_team_rank_FIFA','away_team_rank_FIFA']
-        feat = ['1N2_1','1N2_N','1N2_2','home_team_rank_FIFA','away_team_rank_FIFA','season']
+        #feat = ['1N2_1','1N2_N','1N2_2','home_team_rank_FIFA','away_team_rank_FIFA','season']
 
         game_to_predict=self.game.loc[:,feat].values.reshape(1,-1)
         game_to_predict=self.game.loc[:,feat]
@@ -104,4 +107,5 @@ class PredictGame:
                     self.game.loc[:,'away_team'],self.game.loc[:,'correct_score'],pred1, 
                     result, result_proba_1N2, result_proba_12,score])    
         #print(res)
+        #pd.DataFrame(res).T.to_csv(f'games_predict/g_{timestampStr}_{random.randint(0000,9999)}.csv')
         return res, res[0][0]

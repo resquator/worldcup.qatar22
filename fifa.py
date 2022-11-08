@@ -17,7 +17,7 @@ class Fifa:
             rank=self.df.query('country_full == @team ').sort_values('rank_date', ascending=True)['rank'].tolist()[-1]
             #rank = rank * (1/np.mean(self.df.query('country_full == @team and rank_date >= @since').sort_values('rank_date', ascending=True)['total_points'].tolist()))
         except:
-            rank=-1
+            rank=99
             
         return rank
     

@@ -2,9 +2,13 @@ import numpy as np
 import pandas as pd
 
 class Bets:
-    def __init__(self):
+    def __init__(self, alpha=0.1):
         FILE = 'dataset/training_dataset.csv'
         df = pd.read_csv(FILE, parse_dates=['matchday'])
+        
+        self.OVER_ODD = 1.5 + (alpha*4)
+        self.INTER_ODD = 1.1 + (alpha*2)
+        self.LOWER_ODD = 0.47 - (alpha/2)
         
         self.df = df.copy()
         
@@ -13,12 +17,12 @@ class Bets:
         cote=[]
 
         field = '1N2_1'
-        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),1.1])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),1.1])
+        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),self.INTER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),self.INTER_ODD])
 
         temp=pd.DataFrame(cote).dropna()
         temp.columns = ['COTE','FACTOR']
@@ -28,12 +32,12 @@ class Bets:
         cote=[]
 
         field = '1N2_N'
-        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),1.1])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),1.1])
+        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),self.INTER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),self.INTER_ODD])
 
         temp=pd.DataFrame(cote).dropna()
         temp.columns = ['COTE','FACTOR']
@@ -44,12 +48,12 @@ class Bets:
         cote=[]
 
         field = '1N2_2'
-        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),1.5])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),1.1])
-        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),0.47])
-        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),1.1])
+        cote.append([np.mean(df.query('home_team == @home_team and away_team == @away_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and away_team == @home_team')[field]),self.OVER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 1')[field]),self.INTER_ODD])
+        cote.append([np.mean(df.query('home_team == @away_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 2')[field]),self.LOWER_ODD])
+        cote.append([np.mean(df.query('home_team == @home_team and target == 1')[field]),self.INTER_ODD])
 
         temp=pd.DataFrame(cote).dropna()
         temp.columns = ['COTE','FACTOR']
