@@ -1,0 +1,49 @@
+,home_team,away_team,home_score,away_score,h_points,a_points,timestamp
+0,Qatar,Ecuador,1,1,1.0,1.0,20221108205827
+1,Senegal,Netherlands,1,1,1.0,1.0,20221108205827
+2,Qatar,Senegal,1,1,1.0,1.0,20221108205827
+3,Netherlands,Ecuador,2,0,3.0,0.0,20221108205827
+4,Ecuador,Senegal,1,1,1.0,1.0,20221108205827
+5,Netherlands,Qatar,2,0,3.0,0.0,20221108205827
+6,England,Iran,2,0,3.0,0.0,20221108205827
+7,USA,Wales,1,1,1.0,1.0,20221108205827
+8,Wales,Iran,1,0,3.0,0.0,20221108205827
+9,England,USA,1,1,1.0,1.0,20221108205827
+10,Iran,USA,1,1,1.0,1.0,20221108205827
+11,Wales,England,1,1,1.0,1.0,20221108205827
+12,Argentina,Saudi Arabia,2,0,3.0,0.0,20221108205827
+13,Mexico,Poland,1,1,1.0,1.0,20221108205827
+14,Poland,Saudi Arabia,2,0,3.0,0.0,20221108205827
+15,Argentina,Mexico,1,0,3.0,0.0,20221108205827
+16,Poland,Argentina,1,1,1.0,1.0,20221108205827
+17,Saudi Arabia,Mexico,1,1,1.0,1.0,20221108205827
+18,Denmark,Tunisia,2,0,3.0,0.0,20221108205827
+19,France,Australia,2,0,3.0,0.0,20221108205827
+20,Tunisia,Australia,1,1,1.0,1.0,20221108205827
+21,France,Denmark,1,0,3.0,0.0,20221108205827
+22,Australia,Denmark,1,1,1.0,1.0,20221108205827
+23,Tunisia,France,1,1,1.0,1.0,20221108205827
+24,Germany,Japan,1,0,3.0,0.0,20221108205827
+25,Spain,Costa Rica,2,0,3.0,0.0,20221108205827
+26,Japan,Costa Rica,1,1,1.0,1.0,20221108205827
+27,Spain,Germany,1,1,1.0,1.0,20221108205827
+28,Costa Rica,Germany,1,1,1.0,1.0,20221108205827
+29,Japan,Spain,1,1,1.0,1.0,20221108205827
+30,Morocco,Croatia,1,1,1.0,1.0,20221108205827
+31,Belgium,Canada,2,0,3.0,0.0,20221108205827
+32,Belgium,Morocco,2,0,3.0,0.0,20221108205827
+33,Croatia,Canada,1,0,3.0,0.0,20221108205827
+34,Canada,Morocco,1,1,1.0,1.0,20221108205827
+35,Croatia,Belgium,1,1,1.0,1.0,20221108205827
+36,Switzerland,Cameroon,2,0,3.0,0.0,20221108205827
+37,Brazil,Serbia,2,0,3.0,0.0,20221108205827
+38,Cameroon,Serbia,1,1,1.0,1.0,20221108205827
+39,Brazil,Switzerland,2,0,3.0,0.0,20221108205827
+40,Cameroon,Brazil,0,1,0.0,3.0,20221108205827
+41,Serbia,Switzerland,1,1,1.0,1.0,20221108205827
+42,Uruguay,South Korea,2,0,3.0,0.0,20221108205827
+43,Portugal,Ghana,2,0,3.0,0.0,20221108205827
+44,South Korea,Ghana,1,1,1.0,1.0,20221108205827
+45,Portugal,Uruguay,1,0,3.0,0.0,20221108205827
+46,Ghana,Uruguay,1,1,1.0,1.0,20221108205827
+47,South Korea,Portugal,1,1,1.0,1.0,20221108205827
